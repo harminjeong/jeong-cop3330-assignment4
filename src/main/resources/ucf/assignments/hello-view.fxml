@@ -1,16 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="ucf.assignments.Controller">
+<VBox alignment="CENTER" prefHeight="733.0" prefWidth="654.0" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.Controller">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+    <Label fx:id="welcomeText" prefHeight="17.0" prefWidth="204.0" text="Welcome to To-Do Lists!" />
+   <SplitPane orientation="VERTICAL">
+      <items>
+         <AnchorPane prefHeight="65.0" prefWidth="612.0">
+            <children>
+                <Button layoutX="14.0" layoutY="597.0" onAction="#onAddButtonClick" text="Add To-Do List" />
+               <TextField layoutX="136.0" layoutY="597.0" onAction="#descriptionText" prefHeight="25.0" prefWidth="224.0" promptText="Add to-do list description here..." />
+               <ListView layoutX="7.0" layoutY="54.0" prefHeight="486.0" prefWidth="165.0" />
+               <DatePicker layoutX="426.0" layoutY="14.0" onAction="#datePicker" promptText="pick date" />
+               <ListView editable="true" layoutX="214.0" layoutY="54.0" prefHeight="486.0" prefWidth="392.0" />
+               <Button layoutX="368.0" layoutY="547.0" onAction="#onEditButtonClick" text="Edit To-Do List" />
+               <Button layoutX="79.0" layoutY="547.0" onAction="#onEditTitleButtonClick" text="Edit Title" />
+               <Button layoutX="254.0" layoutY="547.0" onAction="#onDeleteButtonClick" text="Delete To-Do List" />
+               <CheckBox layoutX="196.0" layoutY="56.0" mnemonicParsing="false" />
+               <CheckBox layoutX="196.0" layoutY="195.0" mnemonicParsing="false" />
+               <CheckBox layoutX="196.0" layoutY="149.0" mnemonicParsing="false" />
+               <CheckBox layoutX="196.0" layoutY="126.0" mnemonicParsing="false" />
+               <CheckBox layoutX="196.0" layoutY="173.0" mnemonicParsing="false" />
+               <CheckBox layoutX="196.0" layoutY="104.0" mnemonicParsing="false" />
+               <CheckBox layoutX="196.0" layoutY="79.0" mnemonicParsing="false" />
+               <Button layoutX="466.0" layoutY="547.0" onAction="#onSaveButtonClick" text="Save To-Do List" />
+               <CheckBox layoutX="196.0" layoutY="218.0" mnemonicParsing="false" />
+               <CheckBox layoutX="196.0" layoutY="357.0" mnemonicParsing="false" />
+               <CheckBox layoutX="196.0" layoutY="311.0" mnemonicParsing="false" />
+               <CheckBox layoutX="196.0" layoutY="288.0" mnemonicParsing="false" />
+               <CheckBox layoutX="196.0" layoutY="335.0" mnemonicParsing="false" />
+               <CheckBox layoutX="196.0" layoutY="266.0" mnemonicParsing="false" />
+               <CheckBox layoutX="196.0" layoutY="241.0" mnemonicParsing="false" />
+            </children>
+         </AnchorPane>
+      </items>
+   </SplitPane>
 </VBox>

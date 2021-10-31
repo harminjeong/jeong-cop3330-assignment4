@@ -1,0 +1,29 @@
+@startuml
+
+class Controller {
+    +void descriptionText();
+    +void datePicker();
+    +void onEditButtonClick();
+    +void onEditTitleButtonClick();
+    +void onDeleteButtonClick();
+    +void onSaveButtonClick();
+}
+
+class App {
+    +void start();
+    +void main();
+}
+
+class LocalEvent{
+    +String description;
+    +LocalDate date;
+    +void setDescription();
+    +LocalDate getDate;
+    +void setDate();
+    +LocalEvent(LocalDate date,String description);
+
+}
+
+App *- nameSorter
+
+@enduml
