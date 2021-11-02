@@ -1,0 +1,23 @@
+Classes:
+App
+Controller
+LocalEvent
+
+Functions:
+(in App)
+start
+main
+(in Controller)
+onAddButtonClick
+addEvent
+descriptionText
+datePicker
+onEditButtonClick
+onEditTitleButtonClick
+onDeleteButtonClick
+onSaveButtonClick
+(in LocalEvent)
+getDescription
+setDescription
+getDate
+setDate
